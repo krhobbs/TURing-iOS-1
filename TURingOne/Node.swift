@@ -14,6 +14,7 @@ public struct Node {
     var decisions: [Decision] = []
     var children: [Node] = []
     var speaker: Int
+    var stress: Int
     var checkpoint: Bool
     
     func addChild() {

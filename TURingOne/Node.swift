@@ -16,4 +16,7 @@ public struct Node {
     var speaker: Int
     var checkpoint: Bool
     
+    func addChild() {
+        return
+    }
 }

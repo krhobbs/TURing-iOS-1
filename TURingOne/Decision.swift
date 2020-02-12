@@ -12,14 +12,17 @@ public struct Decision {
     var id: String
     var text: String
     var whichChild: Int
-    var attitude: Int
+    var trust: Int
+    var stress: Int
     var shortText: String
-    
-    init(id: String, text: String, whichChild: Int, attitude: Int, shortText: String) {
+
+    init(id: String, text: String, whichChild: Int, trust: Int, stress: Int, shortText: String) {
         self.id = id
         self.text = text
         self.whichChild = whichChild
-        self.attitude = attitude
+        self.trust = trust
+        self.stress = stress
         self.shortText = shortText
+        
     }
 }

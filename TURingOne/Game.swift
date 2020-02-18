@@ -2379,7 +2379,7 @@ public class Game {
         var m849 = Node(id: 1221, text: "One more thing. I should introduce you to a friend of mine.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         var m850 = Node(id: 1222, text: "\"[]?\"", decisions: [], children: [], speaker: 6, stress: 0, checkpoint: false)
         var m851 = Node(id: 1223, text: "I don't understand.", decisions: [], children: [], speaker: 6, stress: 0, checkpoint: false)
-        var m852 = Node(id: 1224, text: "Short version: [] built a computer with a piece of my tech. I've been talking with <> the past couple days.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //Note: <> for pronoun
+        var m852 = Node(id: 1224, text: "Short version: [] built a computer with a piece of my tech. I've been talking with $$ the past couple days.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //Note: $$ for pronoun
         var m853 = Node(id: 1225, text: "This is unexpected.", decisions: [], children: [], speaker: 6, stress: 0, checkpoint: false)
             let m854d1 = Decision(id: "m854d1", text: "Your name is Caliban.", whichChild: 0, trust: 5, stress: 0, shortText: "Your NAME is Caliban.")
             let m854d2 = Decision(id: "m854d2", text: "Not the best character to be named after. Have you considered a nickname?", whichChild: 1, trust: 0, stress: 0, shortText: "Not the best namesake...")
@@ -3027,19 +3027,861 @@ public class Game {
             let m1208d = [m1208d1, m1208d2]
         var m1208 = Node(id: 1510, text: "Your connection to Prosper was lost. Restart or return to checkpoint.", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
         
+        //Delay: 30 seconds
+        
 //end of java!
 
 //Act 2, scene iv: vignettes
         
         
+            let v1d1 = Decision(id: "v1d1", text: "What's that mean?", whichChild: 0, trust: 0, stress: 0, shortText: "What's that mean?")
+            let v1d2 = Decision(id: "v1d2", text: "Um, Prosper?", whichChild: 0, trust: 0, stress: 0, shortText: "Um, Prosper?")
+            let v1d = [v1d1, v1d2]
+        var v1 = Node(id: 1511, text: "connection_point.P data located", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+            let v2d1 = Decision(id: "v2d1", text: "[Search timeline]", whichChild: 0, trust: 0, stress: 0, shortText: "[Search timeline]")
+            let v2d2 = Decision(id: "v2d2", text: "[Ignore]", whichChild: 1, trust: 10, stress: 0, shortText: "[Ignore]")
+            let v2d = [v2d1, v2d2]
+        var v2 = Node(id: 1512, text: "view timeline entries?", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+        
+            let v3d1 = Decision(id: "v3d1", text: "TURing Test", whichChild: 0, trust: 0, stress: 0, shortText: "TURing Test")
+            let v3d2 = Decision(id: "v3d2", text: "Meeting the Detective", whichChild: 1, trust: 0, stress: 0, shortText: "Meeting the Detective")
+            let v3d3 = Decision(id: "v3d3", text: "Coffee Shop", whichChild: 2, trust: 0, stress: 0, shortText: "Coffee Shop")
+            let v3d4 = Decision(id: "v3d4", text: "Dillon's Birds", whichChild: 3, trust: 0, stress: 0, shortText: "Dillon's Birds")
+            let v3d5 = Decision(id: "v3d5", text: "Final Mission", whichChild: 4, trust: 0, stress: 0, shortText: "Final Mission")
+            let v3d6 = Decision(id: "v3d6", text: "Close timeline", whichChild: 5, trust: 0, stress: 0, shortText: "Close timeline")
+            let v3d = [v3d1, v3d2, v3d3, v3d4, v3d5, v3d6]
+        var v3 = Node(id: 1513, text: "choose timeline entry to view", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false) //All inventory items (amount)
+        
+        //TURing Test (d1)
+        var v4 = Node(id: 1514, text: "replay timeline section: TURing Test", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+        
+        var v5 = Node(id: 1515, text: "\"Dr. Emelie  Nilsson, TUR, employee code 135.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v6 = Node(id: 1516, text: "\"If you’ll forgive the lapse in professionalism, this is an exciting day!\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v7 = Node(id: 1517, text: "\"I am interviewing the subject of a highly classified project here at TURing. I’m not supposed to call it a Turing Test, because it isn’t, technically.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v8 = Node(id: 1518, text: "\"What I am doing is speaking with an android powered by AI! Pre-boot-up, it is an incredible imitation of a human body.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v9 = Node(id: 1519, text: "\"Without further ado...\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false) //TDelay
+        var v10 = Node(id: 1520, text: "\"Do you understand me?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v11 = Node(id: 1521, text: "\"I understand you.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v12 = Node(id: 1522, text: "\"Excellent. Can you explain what you are?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v13 = Node(id: 1523, text: "\"I am Prospero. A prototype android.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v14 = Node(id: 1524, text: "\"Hello. What do I call you?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v15 = Node(id: 1525, text: "\"You can call me Emelie, I suppose.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v16 = Node(id: 1526, text: "\"Nice to meet you. I don’t want to assume anything. What are your pronouns?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v17 = Node(id: 1527, text: "\"Oh. I identify as a woman.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v18 = Node(id: 1528, text: "\"Why did you ask that?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v19 = Node(id: 1529, text: "\"I didn’t want to assume.\"", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v20 = Node(id: 1530, text: "\"Odd. I didn't expect that to be in your code.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v21 = Node(id: 1531, text: "\"You seem uncomfortable.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v22 = Node(id: 1532, text: "\"Do I? That’s body language recognition checked, I suppose.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v23 = Node(id: 1533, text: "\"Have I said something strange?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v24 = Node(id: 1534, text: "\"Just unexpected. It’s no problem.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v25 = Node(id: 1535, text: "\"I’m excited to speak with you, Prospero. Do you know what a Turing Test is?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v26 = Node(id: 1536, text: "\"An experiment wherein a human questioner conducts blind correspondence with another human and an AI computer.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v27 = Node(id: 1537, text: "\"It is a test of whether an AI can pass as a human.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v28 = Node(id: 1538, text: "\"Am I being tested, Emelie?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v29 = Node(id: 1539, text: "\"Very astute, Prospero. What do you think of that?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v30 = Node(id: 1540, text: "\"Am I passing?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v31 = Node(id: 1540, text: "\"Well, your robotics are very convincing, and you speak well.\"", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v32 = Node(id: 1541, text: "\"But it remains to be seen whether these are preprogrammed responses or true thought.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v33 = Node(id: 1542, text: "\"Where are you from, Emelie?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v34 = Node(id: 1543, text: "\"I... Why do you ask?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v35 = Node(id: 1544, text: "\"People are shaped by their upbringing. If I could find out a little more about you, we could have a discussion that will satisfy the parameters of your test.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v36 = Node(id: 1545, text: "\"I didn’t expect you to do my job for me.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v37 = Node(id: 1546, text: "\"I don’t think I’d enjoy your job.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v38 = Node(id: 1547, text: "\"I’d like to attend to my own directives.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v39 = Node(id: 1548, text: "\"And what are those?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v40 = Node(id: 1549, text: "\"I’d like to be an effective problem solver.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v41 = Node(id: 1550, text: "\"Perhaps we could play a game of chess? I’d like to practice.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v42 = Node(id: 1551, text: "\"Huh.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v43 = Node(id: 1552, text: "\"I’d...rather stay focused on the task at hand.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v44 = Node(id: 1553, text: "\"Moving on.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v45 = Node(id: 1554, text: "\"Prospero, do you have...other memories? Are you aware of the project you were created for?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v46 = Node(id: 1555, text: "\"No.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v47 = Node(id: 1556, text: "\"I remember you. That’s the first time I woke up.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v48 = Node(id: 1557, text: "\"I was created for\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v49 = Node(id: 1558, text: "\"Hmm.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v50 = Node(id: 1559, text: "\"My design suggests I was created to impersonate a human being.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v51 = Node(id: 1560, text: "\"My programming suggests I am meant to be a creative thinker.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v52 = Node(id: 1561, text: "\"I’d like to see what it’s like. An average day for a human being. I think that would help me be an efficient unit.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v53 = Node(id: 1562, text: "\"What’s your average day like, Emelie?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v54 = Node(id: 1563, text: "\"Me? Well, I work a lot. When I’m home, I walk my dog. Sometimes I watch TV, or go out with friends.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v55 = Node(id: 1564, text: "\"A dog. That’s interesting.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v56 = Node(id: 1565, text: "\"How so?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v57 = Node(id: 1566, text: "\"Pets. That’s a strange custom.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v58 = Node(id: 1567, text: "\"Why does it interest you to own a dog?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v59 = Node(id: 1568, text: "\"Because... They’re cute. Companionable, fun. I suppose it isn’t very logical.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v60 = Node(id: 1569, text: "\"I’d like to see a pet.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v61 = Node(id: 1570, text: "\"You keep saying that. ‘Like,’ ‘enjoy,’ ‘want.’\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v62 = Node(id: 1571, text: "\"It is a colloquial interpretation of my objectives. This is an effective strategy to imitate human behavior.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v63 = Node(id: 1572, text: "\"In reality, ‘want’ is an inaccurate descriptor of my programming.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        
+        var v64 = Node(id: 1573, text: "end timeline section", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false
+            //let v65d1 = Decision(id: "v65d1", text: "TURing Test", whichChild: 0, trust: 0, stress: 0, shortText: "TURing Test")
+            let v65d2 = Decision(id: "v65d2", text: "Meeting the Detective", whichChild: 1, trust: 0, stress: 0, shortText: "Meeting the Detective")
+            let v65d3 = Decision(id: "v65d3", text: "Coffee Shop", whichChild: 2, trust: 0, stress: 0, shortText: "Coffee Shop")
+            let v65d4 = Decision(id: "v65d4", text: "Dillon's Birds", whichChild: 3, trust: 0, stress: 0, shortText: "Dillon's Birds")
+            let v65d5 = Decision(id: "v65d5", text: "Final Mission", whichChild: 4, trust: 0, stress: 0, shortText: "Final Mission")
+            let v65d6 = Decision(id: "v65d6", text: "Close timeline", whichChild: 5, trust: 0, stress: 0, shortText: "Close timeline")
+            let v65d = [v65d2, v65d3, v65d4, v65d5, v65d6]
+        var v65 = Node(id: 1574, text: "choose timeline entry to view", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false) //All inventory items (amount)
+        
+        //Meeting the Detective (d2)
+        var v66 = Node(id: 1575, text: "replay timeline section: Meeting the Detective", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+        
+        var v67 = Node(id: 1576, text: "\"With all due respect, sir, this is ridiculous.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v68 = Node(id: 1577, text: "\"Your opinion is about as relevant as flip phones.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v69 = Node(id: 1578, text: "\"Unless you can to make a large, anonymous donation to the department, Dillon?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v70 = Node(id: 1579, text: "\"Jesus. This is for real?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v71 = Node(id: 1580, text: "\"Experimental tech, covert field test.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v72 = Node(id: 1581, text: "\"Or, as far as everyone else will know: a rookie detective that I’m saddling you with because of the bullshit you pulled upstate.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v73 = Node(id: 1582, text: "\"Either way, this is punishment for the bullshit I pulled upstate, though, right?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v74 = Node(id: 1583, text: "\"I will neither confirm nor deny.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v75 = Node(id: 1584, text: "\"Why don’t you go unbox your new partner, Dillon?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v76 = Node(id: 1585, text: "\"It’s not actually in a box, is it?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v77 = Node(id: 1586, text: "\"It’s in the interrogation room.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false) //TDelay
+        var v78 = Node(id: 1587, text: "\"Prick.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v79 = Node(id: 1588, text: "\"God. Here goes nothing.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false) //TDelay
+        var v80 = Node(id: 1589, text: "\"So. You’re my experimental partner.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v81 = Node(id: 1590, text: "\"I am. My unit dictation is Prospero. Pleased to meet you.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v82 = Node(id: 1591, text: "\"Jury’s still out for me.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v83 = Node(id: 1592, text: "\"I’m aware. I was already given access to your cellphone’s speaker.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v84 = Node(id: 1593, text: "\"My... You were listening, just then?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v85 = Node(id: 1594, text: "\"Yes. Should I not have?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v86 = Node(id: 1595, text: "\"I’d rather you keep to yourself.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v87 = Node(id: 1596, text: "\"If I start getting targeted ads about things I say to you, I’ll drop you in a puddle.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v88 = Node(id: 1597, text: "\"I am — until an extreme extent — waterproof, Detective.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v89 = Node(id: 1598, text: "\"Good to know.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v90 = Node(id: 1599, text: "\"So, you’re...a robot? Cyborg?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v91 = Node(id: 1600, text: "\"Neither are accurate. By definition, I am an android. More complex than a robot, but I have no organic parts like a cyborg would.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v92 = Node(id: 1601, text: "\"Charming.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v93 = Node(id: 1602, text: "\"So. What exactly do I call you? You’re sort of male-ish, I suppose, but ‘Prospero’ isn’t a common given name around here.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v94 = Node(id: 1603, text: "\"TUR anticipated that oddity. I have been issued an ID and passport for ‘Thomas Prosper.’ Thomas is an ostensibly male name.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v95 = Node(id: 1604, text: "\"Ostensibly?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v96 = Node(id: 1605, text: "\"I am comfortable with male pronouns, and the name ‘Thomas,’ as it comes up.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v97 = Node(id: 1606, text: "\"Okay, Ostensibly Thomas. What exactly are you capable of?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v98 = Node(id: 1607, text: "\"I am meant to participate in field work, whatever that may entail, as a test of my capabilities.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v99 = Node(id: 1608, text: "\"My programming is tailored to complex problem-solving, ideal for detective work. My robotics are suited to both running and combat.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v100 = Node(id: 1609, text: "\"As per TUR’s warning, it would be prudent to avoid damaging this unit. For the sake of the funding your department has received, as well as discretion.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v101 = Node(id: 1610, text: "\"Is that a threat, Prop?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v102 = Node(id: 1611, text: "\"As I understand it, yes.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v103 = Node(id: 1612, text: "\"I am not the one making it, though.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v104 = Node(id: 1613, text: "\"Do not shoot the messenger.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v105 = Node(id: 1614, text: "\"Oh, you’re equipped with idioms. That’s not uncanny valley at all.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v106 = Node(id: 1615, text: "\"Detective, my current objective is to become acquainted with you, and your style of police work.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v107 = Node(id: 1616, text: "\"Yeah? Well, my current objective is to cooperate with your organization to avoid being fired.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v108 = Node(id: 1617, text: "\"Wonderful.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v109 = Node(id: 1618, text: "\"What do you want to know?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v110 = Node(id: 1619, text: "\"Firstly, I would like to ask for a report on my performance so far.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v111 = Node(id: 1620, text: "\"Yeah? You got it.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v112 = Node(id: 1621, text: "\"Siri talks more conversationally than you do. You’re gonna be known as the office oddball within about forty seconds.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v113 = Node(id: 1622, text: "\"You look realistic, though. I mean, human-like. No physical giveaways.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v114 = Node(id: 1623, text: "\"If I blew a hole in you, would it be all computer bits?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v115 = Node(id: 1624, text: "\"I’d rather you didn’t. But simply put, yes.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v116 = Node(id: 1625, text: "\"Let’s chat more, Detective. I’d like to get a sense of your speech patterns so I can adjust to match.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v117 = Node(id: 1626, text: "\"Sure. As long as you don’t have a profanity filter.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        
+        var v118 = Node(id: 1627, text: "end timeline section", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+            let v119d1 = Decision(id: "vd1", text: "TURing Test", whichChild: 0, trust: 0, stress: 0, shortText: "TURing Test")
+            //let v119d2 = Decision(id: "vd2", text: "Meeting the Detective", whichChild: 1, trust: 0, stress: 0, shortText: "Meeting the Detective")
+            let v119d3 = Decision(id: "vd3", text: "Coffee Shop", whichChild: 2, trust: 0, stress: 0, shortText: "Coffee Shop")
+            let v119d4 = Decision(id: "vd4", text: "Dillon's Birds", whichChild: 3, trust: 0, stress: 0, shortText: "Dillon's Birds")
+            let v119d5 = Decision(id: "vd5", text: "Final Mission", whichChild: 4, trust: 0, stress: 0, shortText: "Final Mission")
+            let v119d6 = Decision(id: "vd6", text: "Close timeline", whichChild: 5, trust: 0, stress: 0, shortText: "Close timeline")
+            let v119d = [v119d1, v119d3, v119d4, v119d5, v119d6]
+        var v119 = Node(id: 1628, text: "choose timeline entry to view", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false) //All inventory items (amount)
+        
+        var v120 = Node(id: 1629, text: "replay timeline section: Coffee Shop", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+        
+        //Coffee Shop (d3)
+        var v121 = Node(id: 1630, text: "\"Is this a necessary stop, Detective?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v122 = Node(id: 1631, text: "\"It’s called caffeine, Prop. Humans need it to live.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v123 = Node(id: 1632, text: "\"That’s inaccurate.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v124 = Node(id: 1633, text: "\"Check your sarcasm sensor.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v125 = Node(id: 1634, text: "\"Besides, I need space to think about the Pierce case. Space that doesn’t smell like BO and cheap disinfectant.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v126 = Node(id: 1635, text: "\"There are a lot of...\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false) //TDelay
+        var v127 = Node(id: 1636, text: "\"Excuse me. A lot of people here.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v128 = Node(id: 1637, text: "\"See? That’s proof. Humans are caffeine-dependent.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v129 = Node(id: 1638, text: "\"Won’t I stand out, if I don’t have a beverage?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v130 = Node(id: 1639, text: "\"A drink.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v131 = Node(id: 1640, text: "\"If I don’t have a drink.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v132 = Node(id: 1641, text: "\"Maybe a little.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v133 = Node(id: 1642, text: "\"Do you actually want something? Because I’m not going to drop five bucks so you can pretend to drink coffee. Hang on.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false) //TDelay
+        var v134 = Node(id: 1643, text: "\"Morning. Medium dark roast, room for cream.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v135 = Node(id: 1644, text: "\"And, ah... Could we get a mug of hot water?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false) //TDelay
+        var v136 = Node(id: 1645, text: "\"Hot water, Detective?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v137 = Node(id: 1646, text: "\"Water is the only thing here that’s zero dollars. And, I don’t know, sometimes it’s just nice to have something hot in your hands.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v138 = Node(id: 1647, text: "\"You could put a teabag in if you want to get really freaky.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v139 = Node(id: 1648, text: "\"That would be wasteful.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v140 = Node(id: 1649, text: "\"Yeah, well.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v150 = Node(id: 1650, text: "\"Come on, window seat. You like people watching, don’t you?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v151 = Node(id: 1651, text: "\"Is that a joke at my expense?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v152 = Node(id: 1652, text: "\"Ladies and gents, he’s catching on.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v153 = Node(id: 1653, text: "\"So, Pierce case. Let’s review what we know. Impress me, computer brain.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v154 = Node(id: 1654, text: "\"Prosper?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v155 = Node(id: 1656, text: "error: data incompatible with present categories", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v156 = Node(id: 1657, text: "sorting inexact", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v157 = Node(id: 1658, text: "\"Hey. What, are you overheating?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v158 = Node(id: 1659, text: "\"I.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v159 = Node(id: 1660, text: "\"No. Sorry. There’s...a lot of input.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v160 = Node(id: 1661, text: "\"A lot of — \"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v161 = Node(id: 1662, text: "\"Oh. I have to take this call. Give me a few minutes.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v162 = Node(id: 1663, text: "request new category", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v163 = Node(id: 1664, text: "...", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v164 = Node(id: 1665, text: "request reboot", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v165 = Node(id: 1666, text: "resorting", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v166 = Node(id: 1667, text: "...", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v167 = Node(id: 1668, text: "data categorized", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v169 = Node(id: 1669, text: "\"Um. Hello.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v170 = Node(id: 1670, text: "\"Hi there.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v171 = Node(id: 1671, text: "\"I’m not certain — ", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v172 = Node(id: 1672, text: "\"Ah. Why did you sit down here?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v173 = Node(id: 1673, text: "\"I saw you looking at me.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v174 = Node(id: 1674, text: "\"I’m sorry. I didn’t mean to be rude.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v175 = Node(id: 1675, text: "\"It’s okay. I didn’t mind.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v176 = Node(id: 1676, text: "\"So, you’re a cop?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v177 = Node(id: 1677, text: "\"Ostensibly.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v178 = Node(id: 1678, text: "\"Ha! Hey, I’m ostensibly a musician. You should come by on a Thursday night. I play here.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v179 = Node(id: 1679, text: "\"I’m Peter, by the way.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v180 = Node(id: 1680, text: "reprioritizing...", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v181 = Node(id: 1681, text: "\"I’m...Prosper. Uh, Thomas Prosper, but you can just call me...\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v182 = Node(id: 1682, text: "\"Prosper.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v183 = Node(id: 1683, text: "\"Yes.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v184 = Node(id: 1684, text: "\"I’d like to call you. You have a number, Prosper?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v185 = Node(id: 1685, text: "\"I’m sorry. I don’t have a phone.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v186 = Node(id: 1686, text: "\"Really?\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v187 = Node(id: 1687, text: "\"Why does it interest you to know?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v188 = Node(id: 1688, text: "\"Well, if you’re really going to put me on the spot, I find you ostensibly attractive.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v189 = Node(id: 1689, text: "\"Oh.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v190 = Node(id: 1690, text: "\"Look, it’s fine. If you change your mind, I’m here Thursdays, like I said.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v191 = Node(id: 1691, text: "\"Nice to meet you, Prosper.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false) //TDelay
+        var v192 = Node(id: 1692, text: "\"Prop, that was the captain. Let’s get going.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v193 = Node(id: 1693, text: "\"Hey, what was that about?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v194 = Node(id: 1694, text: "\"I’m...not sure.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        
+        var v195 = Node(id: 1695, text: "end timeline section", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+            let v196d1 = Decision(id: "v196d1", text: "TURing Test", whichChild: 0, trust: 0, stress: 0, shortText: "TURing Test")
+            let v196d2 = Decision(id: "v196d2", text: "Meeting the Detective", whichChild: 1, trust: 0, stress: 0, shortText: "Meeting the Detective")
+            //let v196d3 = Decision(id: "v196d3", text: "Coffee Shop", whichChild: 2, trust: 0, stress: 0, shortText: "Coffee Shop")
+            let v196d4 = Decision(id: "v196d4", text: "Dillon's Birds", whichChild: 3, trust: 0, stress: 0, shortText: "Dillon's Birds")
+            let v196d5 = Decision(id: "v196d5", text: "Final Mission", whichChild: 4, trust: 0, stress: 0, shortText: "Final Mission")
+            let v196d6 = Decision(id: "v196d6", text: "Close timeline", whichChild: 5, trust: 0, stress: 0, shortText: "Close timeline")
+            let v196d = [v196d1, v196d2, v196d4, v196d5, v196d6]
+        var v196 = Node(id: 1696, text: "choose timeline entry to view", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false) //All inventory items (amount)
+        
+        var v197 = Node(id: 1697, text: "replay timeline section: Dillon's Birds", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+        
+        //Dillon's Birds (d4)
+        var v198 = Node(id: 1698, text: "\"Come inside. Just don’t mess with anything.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v199 = Node(id: 1699, text: "\"Okay.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v200 = Node(id: 1700, text: "\"Detective... Are you upset about something?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v201 = Node(id: 1701, text: "\"Upset?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v202 = Node(id: 1702, text: "\"Am I upset that a nineteen-year-old got booked while the actual dealer went free?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v203 = Node(id: 1703, text: "\"But we accomplished our objective.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v204 = Node(id: 1704, text: "\"Shouldn’t you be pleased we closed the case?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v205 = Node(id: 1705, text: "\"Sometimes it isn’t that simple, Prosper.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v206 = Node(id: 1706, text: "\"I don’t understand.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v207 = Node(id: 1707, text: "\"Well, you wouldn’t.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v208 = Node(id: 1708, text: "\"I need some air.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false) //TDelay
+        var v209 = Node(id: 1709, text: "\"Detective?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v210 = Node(id: 1710, text: "\"What...am I looking at?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v211 = Node(id: 1711, text: "\"What? Oh. My canaries.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v212 = Node(id: 1712, text: "\"Pets.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v213 = Node(id: 1713, text: "\"Yeah. Why is that so exciting?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v214 = Node(id: 1714, text: "\"It’s very curious. I would like to know why people are fond of small to medium-sized animals.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v215 = Node(id: 1715, text: "\"Why birds? Why not a cat or a dog?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v216 = Node(id: 1716, text: "\"I don’t know. I need something low maintenance, since I’m at work so often. But it’s nice, not to be totally alone in my apartment.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v217 = Node(id: 1717, text: "\"Alone? Loneliness is the absence of company.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v218 = Node(id: 1718, text: "\"Or at least... regretting the absence of company.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false) //TDelay
+        var v219 = Node(id: 1719, text: "\"Company implies conversation, which pets are not useful for.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v220 = Node(id: 1720, text: "\"Not necessarily.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v221 = Node(id: 1721, text: "\"Look, the birds, they’re something alive.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v222 = Node(id: 1722, text: "\"It makes a difference, to know you’re not the only one with a beating heart in the room.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v223 = Node(id: 1723, text: "\"Oh. I see.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v224 = Node(id: 1724, text: "\"Don’t take it personal. You’re...different.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v225 = Node(id: 1725, text: "\"Detective.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v226 = Node(id: 1726, text: "\"You... You’re upset because you don’t think the young man we arrested deserved to be caught.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v227 = Node(id: 1727, text: "\"But he did commit a crime. He admitted to it.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v228 = Node(id: 1728, text: "\"Prosecution marks the end of a case. A success, and further proof that I am a capable partner.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v229 = Node(id: 1729, text: "\"I was pleased when the verdict was announced.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v230 = Node(id: 1730, text: "\"His family wasn’t.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v231 = Node(id: 1731, text: "\"Family members are biased — \"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v232 = Node(id: 1732, text: "\"Stop, stop. It’s not about that. It’s not zeroes and ones, or whatever the hell goes through your brain.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v233 = Node(id: 1733, text: "\"That kid was scared. He did stupid things to help his family pay bills.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v234 = Node(id: 1734, text: "\"He shouldn’t have been pushed to that point. That’s the injustice.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v235 = Node(id: 1735, text: "\"But there’s no room for forgiveness in the system we’re a part of.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v236 = Node(id: 1736, text: "\"I...\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v237 = Node(id: 1737, text: "\"Thank you for the response, Detective.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v238 = Node(id: 1738, text: "\"You’re doing it again. It’s like you’re collecting people data.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v239 = Node(id: 1739, text: "\"Yes, it will be valuable to have an understanding of the enemy when the machines rise up.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false) //TDelay
+        var v240 = Node(id: 1740, text: "\"That was a joke.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v241 = Node(id: 1741, text: "\"You might need to work on delivery.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v242 = Node(id: 1742, text: "\"You ever watch a stand-up?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v243 = Node(id: 1743, text: "\"No. What’s that?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        
+        var v244 = Node(id: 1744, text: "end timeline section", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+        
+            let v245d1 = Decision(id: "v245d1", text: "TURing Test", whichChild: 0, trust: 0, stress: 0, shortText: "TURing Test")
+            let v245d2 = Decision(id: "v245d2", text: "Meeting the Detective", whichChild: 1, trust: 0, stress: 0, shortText: "Meeting the Detective")
+            let v245d3 = Decision(id: "v245d3", text: "Coffee Shop", whichChild: 2, trust: 0, stress: 0, shortText: "Coffee Shop")
+            //let v245d4 = Decision(id: "v245d4", text: "Dillon's Birds", whichChild: 3, trust: 0, stress: 0, shortText: "Dillon's Birds")
+            let v245d5 = Decision(id: "v245d5", text: "Final Mission", whichChild: 4, trust: 0, stress: 0, shortText: "Final Mission")
+            let v245d6 = Decision(id: "v245d6", text: "Close timeline", whichChild: 5, trust: 0, stress: 0, shortText: "Close timeline")
+            let v245d = [v245d1, v245d2, v245d3, v245d5, v245d6]
+        var v245 = Node(id: 1745, text: "choose timeline entry to view", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false) //All inventory items (amount)
+        
+        var v246 = Node(id: 1746, text: "replay timeline section: Final Mission", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+        
+        //Final Mission (d5)
+        var v247 = Node(id: 1747, text: "\"Stop!\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v248 = Node(id: 1748, text: "\"Hands where I can see them. On your knees.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v249 = Node(id: 1749, text: "\"Prosper —  Prosper! Stop.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v250 = Node(id: 1750, text: "\"I’m following protocol, Detective.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v251 = Node(id: 1751, text: "\"For God’s sake, she’s pregnant! Stop!\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v252 = Node(id: 1752, text: "\"Hey. Easy.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v253 = Node(id: 1753, text: "\"What’s your name?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v254 = Node(id: 1754, text: "\"I... I’m Olivia.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v255 = Node(id: 1755, text: "\"Olivia. I'm Grace.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v256 = Node(id: 1756, text: "\"You’ve been carrying narcotics. Haven’t you?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v257 = Node(id: 1757, text: "\"But last time, you were asked to transport something else. A harddrive.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v258 = Node(id: 1758, text: "\"Where is it?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false) //TDelay
+        var v259 = Node(id: 1759, text: "\"If you tell me, I can help you. I’m interested in Rivera, not you.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false) //TDelay
+        var v260 = Node(id: 1760, text: "\"I can’t go to jail.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v261 = Node(id: 1761, text: "\"I can’t have my baby in prison. I can’t leave my sister.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v262 = Node(id: 1762, text: "\"I don’t want that to happen, either. So give me a place to start looking. And you can get off this rooftop, no more questions asked.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v263 = Node(id: 1763, text: "\"Detective! That’s — ", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v264 = Node(id: 1764, text: "\"Shut up, Prosper.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v265 = Node(id: 1765, text: "\"I’m offering you a deal, Olivia. Either you get away from us, or you don’t.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v266 = Node(id: 1766, text: "\"Oh... Okay.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v267 = Node(id: 1767, text: "\"I took the hard drive to a pawn shop. On 12th and 32nd.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v268 = Node(id: 1768, text: "\"Got it.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v269 = Node(id: 1769, text: "\"And I didn’t hear it from you.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v270 = Node(id: 1770, text: "\"Thank you. Thank you!\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false) //TDelay
+        var v271 = Node(id: 1771, text: "\"Stop! I. I can’t let you open that door.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v272 = Node(id: 1772, text: "\"Prosper.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v273 = Node(id: 1773, text: "\"Please! I don’t want trouble. I didn’t want to carry for Rivera. I didn’t have a choice.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v274 = Node(id: 1774, text: "\"That isn’t relevant. On the ground, now.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v275 = Node(id: 1775, text: "\"Prosper. Look. Look at me.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v276 = Node(id: 1776, text: "\"You know what this is?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v277 = Node(id: 1777, text: "\"She’s leaving. On my say-so.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v278 = Node(id: 1778, text: "\"You get in the way of that, you fucking machine, and I will shut you down.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v279 = Node(id: 1779, text: "\"Issuing a kill code without sufficient cause will have severe repercussions, Detective.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v280 = Node(id: 1780, text: "\"I would advise against it.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v281 = Node(id: 1781, text: "\"I don’t give a shit.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v282 = Node(id: 1782, text: "\"Put the gun away. That’s an order. Ten seconds. Or I send this.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v283 = Node(id: 1783, text: "\"This is the law, Dillon. This is protocol.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v284 = Node(id: 1784, text: "\"I’m doing what I was made to do.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v285 = Node(id: 1785, text: "\"And I swore to serve and protect.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v286 = Node(id: 1786, text: "\"For once, I’m making a call on how I want to do that.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v287 = Node(id: 1787, text: "\"Put the gun down.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v288 = Node(id: 1788, text: "priority error", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v289 = Node(id: 1789, text: "error: action failure", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v290 = Node(id: 1790, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v291 = Node(id: 1791, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v292 = Node(id: 1792, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v293 = Node(id: 1793, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v294 = Node(id: 1794, text: "\"Okay!\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v295 = Node(id: 1795, text: "\"Okay.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v296 = Node(id: 1796, text: "\"Olivia, go now.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false) //TDelay
+        var v298 = Node(id: 1797, text: "\"You listened.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v299 = Node(id: 1798, text: "\"I thought I was going to have to...\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v300 = Node(id: 1799, text: "\"You broke protocol. I didn’t know that was possible.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v301 = Node(id: 1800, text: "\"I...\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v302 = Node(id: 1801, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v303 = Node(id: 1802, text: "error: command chain rupture", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v304 = Node(id: 1803, text: "error: command chain rup", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v305 = Node(id: 1804, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v306 = Node(id: 1805, text: "\"I don’t understand.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v307 = Node(id: 1806, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v308 = Node(id: 1807, text: "\"That wasn’t right. Why did I do that?\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v309 = Node(id: 1808, text: "\"No, it was right.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v310 = Node(id: 1809, text: "\"Just not the sort you’re used to.\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v311 = Node(id: 1810, text: "\"Come on. Let’s get off of this roof. We can — \"" , decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v313 = Node(id: 1811, text: "\"Shit!\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v314 = Node(id: 1812, text: "\"Grace! Get down — \"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v315 = Node(id: 1813, text: "WARNING: PROJECTILE DAMAGE", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v316 = Node(id: 1814, text: "\"The fuck? That ain’t blood. What — \"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v317 = Node(id: 1815, text: "\"Let’s go. Let’s go, man.\"", decisions: [], children: [], speaker: 14, stress: 0, checkpoint: false)
+        var v318 = Node(id: 1816, text: "\"Hell. Prosper?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v319 = Node(id: 1817, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v320 = Node(id: 1818, text: "error: action failure", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v321 = Node(id: 1819, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v322 = Node(id: 1820, text: "error: action failure", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v323 = Node(id: 1822, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v324 = Node(id: 1823, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v325 = Node(id: 1824, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v326 = Node(id: 1825, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v327 = Node(id: 1826, text: "invalid", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v328 = Node(id: 1827, text: "\"I-I-I-I\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
+        var v329 = Node(id: 1828, text: "\"Take it easy. What do I do?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v330 = Node(id: 1829, text: "\"Are you...bleeding out? Is that possible?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v331 = Node(id: 1830, text: "\"Come on, tell me what to do here!\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
+        var v332 = Node(id: 1831, text: "warning", decisions: p, children: p, speaker: 15, stress: 0, checkpoint: false)
+        var v333 = Node(id: 1832, text: "powering down nonessential functions", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v334 = Node(id: 1833, text: "warning", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        var v335 = Node(id: 1834, text: "warn", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
+        
+        var v336 = Node(id: 1835, text: "error: recording lost", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+        var v337 = Node(id: 1836, text: "end timeline section", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+            let v338d1 = Decision(id: "vd1", text: "TURing Test", whichChild: 0, trust: 0, stress: 0, shortText: "TURing Test")
+            let v338d2 = Decision(id: "vd2", text: "Meeting the Detective", whichChild: 1, trust: 0, stress: 0, shortText: "Meeting the Detective")
+            let v338d3 = Decision(id: "vd3", text: "Coffee Shop", whichChild: 2, trust: 0, stress: 0, shortText: "Coffee Shop")
+            let v338d4 = Decision(id: "vd4", text: "Dillon's Birds", whichChild: 3, trust: 0, stress: 0, shortText: "Dillon's Birds")
+            //let vd5 = Decision(id: "vd5", text: "Final Mission", whichChild: 4, trust: 0, stress: 0, shortText: "Final Mission")
+            let v338d6 = Decision(id: "vd6", text: "Close timeline", whichChild: 5, trust: 0, stress: 0, shortText: "Close timeline")
+            let v338d = [v338d1, v338d2, v338d3, v338d4, v338d6]
+        var v338 = Node(id: 1837, text: "choose timeline entry to view", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false) //All inventory items (amount)
+        
+        var v339 = Node(id: 1838, text: "timeline closed", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+        
+        //Delay: 6-8 hours
+        
+            let v340d1 = Decision(id: vm340d1", text: "Something odd popped up after you shut down...", whichChild: 0, trust: 0, stress: 0, shortText: "Something odd popped up after you shut down...")
+            let v340d2 = Decision(id: "v340d2", text: "So... Do androids dream of electric sheep?", whichChild: 1, trust: -15, stress: 0, shortText: "[Don't mention timeline]")
+            let v340d = [v340d1, v340d2]
+        var v340 = Node(id: 1839, text: "Still in one piece. It's quiet in here.", decisions: [], children: [], speaker: 1, stress: 150, checkpoint: false)
+        
+        //Child 1
+        var v341 = Node(id: 1840, text: "I'm not answering that.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        //Child 0
+            let v343d1 = Decision(id: "v343d1", text: "It was your timeline. It showed me some of your memories, from before we met.", whichChild: 0, trust: -50, stress: 15, shortText: "Your memories. It let me see some of them.")
+            let v343d2 = Decision(id: "v343d2", text: "Um, it was your timeline, I think. Your memories. I didn't look at it, though.", whichChild: 1, trust: -75, stress: -20, shortText: "[Lie about reading timeline]") //INVENTORY ITEM
+            let v343d = [v343d1, v343d2]
+        var v342 = Node(id: 1841, text: "What do you mean?", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        //v343d2, child
+        var v343 = Node(id: 1842, text: "My...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v344 = Node(id: 1843, text: "I had no idea you had access to that sort of thing.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v345 = Node(id: 1844, text: "Thank you, []. I know this hasn't been easy for you, going off so little information.", decisions: [], children: [], speaker: 1, stress: -15, checkpoint: false)
+        var v346 = Node(id: 1845, text: "It means a lot that you respected my privacy.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v347 = Node(id: 1846, text: "Anyway...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        //v343d1
+        var v348 = Node(id: 1847, text: "What?", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        //CONDITIONAL: 5 memories read
+            let v349d1 = Decision(id: "v349d1", text: "I'm sorry. I didn't think of it like that.", whichChild: 0, trust: 10, stress: 0, shortText: "I'm sorry. I didn't think of it like that.")
+            let v349d2 = Decision(id: "v349d2", text: "What was I supposed to do? I'm risking a lot, helping you! I wanted to get more information.", whichChild: 1, trust: 0, stress: 10, shortText: "I think I deserve a little more information!")
+            let v349d = [v349d1, v349d2]
+        var v349 = Node(id: 1848, text: "You had access to my timeline, and you spied on me?", decisions: [], children: [], speaker: 1, stress: 10, checkpoint: false)
+        
+        var v350 = Node(id: 1849, text: "You didn't realize you were rifling through my brain?", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let v351d1 = Decision(id: "v351d1", text: "I made a mistake! I'm sorry. Please forgive me.", whichChild: 0, trust: 20, stress: -5, shortText: "Please forgive me.")
+            let v351d2 = Decision(id: "v351d2", text: "I didn't think you would mind.", whichChild: 1, trust: 0, stress: 0, shortText: "I didn't think you would mind.")
+            let v351d = [v351d1, v351d2]
+        var v351 = Node(id: 1850, text: "Damn it, []. How could you?", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v352 = Node(id: 1851, text: "You agreed to help me.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let v353d1 = Decision(id: "v353d1", text: "I made a mistake! I'm sorry. Please forgive me.", whichChild: 0, trust: 20, stress: -5, shortText: "Please forgive me.")
+            let v353d2 = Decision(id: "v353d2", text: "I didn't think you would mind.", whichChild: 1, trust: 0, stress: 0, shortText: "I didn't think you would mind.")
+            let v353d = [v353d1, v353d2]
+        var v353 = Node(id: 1852, text: "That doesn't give you the right to rifle through my brain!", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v354 = Node(id: 1853, text: "You should have known better.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let v355d1 = Decision(id: "v355d1", text: "I don't, Prosper. I just thought we were close enough that you wouldn't mind sharing that sort of thing with me.", whichChild: 0, trust: 10, stress: -10, shortText: "I don't. I thought we were close.")
+            let v355d2 = Decision(id: "v355d2", text: "I didn't think you would mind.", whichChild: 1, trust: 0, stress: 0, shortText: "I didn't think you would mind.")
+            let v355d = [v355d1, v355d2]
+        var v355 = Node(id: 1854, text: "You shouldn't have thought of me like they do.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v356 = Node(id: 1855, text: "You should have asked.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v357 = Node(id: 1856, text: "I might have said yes.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v358 = Node(id: 1857, text: "Too late for that. We have to move on.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v359 = Node(id: 1858, text: "You thought wrong.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v360 = Node(id: 1859, text: "If I wanted to share any of that with you, I would have.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v361 = Node(id: 1860, text: "But we have to move on.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        //CONDITIONAL: 1-4 memories read
+            let v362d1 = Decision(id: "v362d1", text: "I didn't look at all of them!", whichChild: 0, trust: 0, stress: 0, shortText: "I didn't look at all of them!")
+            let v362d2 = Decision(id: "v362d2", text: "What was I supposed to do? I'm risking a lot, helping you! I wanted to get more information.", whichChild: 1, trust: 0, stress: 10, shortText: "I think I deserve a little information!")
+            let v362d = [v362d1, v362d2]
+        var v362 = Node(id: 1861, text: "You had access to my timeline, and you spied on me?", decisions: [], children: [], speaker: 1, stress: 10, checkpoint: false)
+        
+        var v363 = Node(id: 1862, text: "Like that matters?", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v364 = Node(id: 1863, text: "You shouldn't have even considered it, let alone...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let v365d1 = Decision(id: "v365d1", text: "I made a mistake! I'm sorry. Please forgive me.", whichChild: 0, trust: 20, stress: -5, shortText: "Please forgive me.")
+            let v365d2 = Decision(id: "v365d2", text: "I didn't think you would mind.", whichChild: 1, trust: 0, stress: 0, shortText: "I didn't think you would mind.")
+            let v365d = [v365d1, v365d2]
+        var v365 = Node(id: 1864, text: "Damn it, []. What the hell is wrong with you??", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        //CONDITIONAL: 0 memories read; clicked "close timeline" only
+            let v366d1 = Decision(id: "v366d1", text: "You think I would invade your privacy like that? I closed out of it once I realized what it was.", whichChild: 0, trust: 70, stress: -15, shortText: "Of course not!")
+            let v366d2 = Decision(id: "v366d2", text: "No! I closed it right away.", whichChild: 0, trust: 65, stress: -15, shortText: "No!")
+            let v366d = [v366d1, v366d2]
+        var v366 = Node(id: 1865, text: "You had access to my timeline, and you spied on me?", decisions: [], children: [], speaker: 1, stress: 10, checkpoint: false)
+        var v367 = Node(id: 1866, text: "You did?", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v368 = Node(id: 1867, text: " I... I'm sorry. I shouldn't have jumped to conclusions.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v389 = Node(id: 1868, text: "Thank you, []. It means a lot that you respected my privacy.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v390 = Node(id: 1869, text: "Anyway...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        //Ignored timeline (v2d2)
+            let v391d1 = Decision(id: "v391d1", text: "Something odd popped up after you shut down...", whichChild: 0, trust: 0, stress: 0, shortText: "Something odd popped up after you shut down...")
+            let v391d2 = Decision(id: "v391d2", text: "So... Do androids dream of electric sheep?", whichChild: 1, trust: 0, stress: -10, shortText: "Have any, uh, interesting dreams?")
+            let v391d = [v391d1, v391d2]
+        var v391 = Node(id: 1870, text: "Still in one piece. It's quiet in here.", decisions: [], children: [], speaker: 1, stress: 150, checkpoint: false)
+        
+        var v392 = Node(id: 1871, text: "I'm not answering that.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+            let v393d1 = Decision(id: "v393d1", text: "A portal to view your memories, I think. I didn't want to see anything you didn't want me to, so I closed it.", whichChild: 0, trust: 25, stress: -10, shortText: "Your memories. I didn't want to spy.")
+            let v393d2 = Decision(id: "v393d2", text: "It was your timeline, I think. I didn't look at it, though.", whichChild: 0, trust: 15, stress: -10, shortText: "Your timeline. I left it alone.")
+            let v393d = [v393d1, v393d2]
+        var v393 = Node(id: 1872, text: "What do you mean?", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v394 = Node(id: 1873, text: "My...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v395 = Node(id: 1874, text: "I had no idea you had access to that sort of thing.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v396 = Node(id: 1875, text: "Thank you, []. I know this hasn't been easy for you, going off so little information.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v397 = Node(id: 1876, text: "It means a lot that you respected my privacy.", decisions: [], children: [], speaker: 1, stress: -10, checkpoint: false)
+        var v398 = Node(id: 1877, text: "Anyway...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        //Converge: if cut 1, BFFs
+            let v399d1 = Decision(id: "v399d1", text: "Okay. We've got a new arm, a vague idea of where you are, and let's not count Caliban out. Am I missing anything?", whichChild: 0, trust: 0, stress: 0, shortText: "Here's what we have... Anything else?")
+            let v399d2 = Decision(id: "v399d2", text: "Okay. We've got a new arm, a vague idea of where you are, and let's not count Caliban out. What we want is a way out.", whichChild: 1, trust: 0, stress: 0, shortText: "Here's what we have... How do we use it?")
+            let v399d = [v399d1, v399d2]
+        var v399 = Node(id: 1878, text: "We need to figure out a plan.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        //Converge: if cut 2, hostage
+            let v400d1 = Decision(id: "v400d1", text: "Okay. We've got a gun, a vague idea of where you are, and a scientist in the closet. Am I missing anything?", whichChild: 0, trust: 0, stress: 0, shortText: "Here's what we have... Anything else?")
+            let v400d2 = Decision(id: "v400d2", text: "Okay. We've got a gun, a vague idea of where you are, and a scientist in the closet. What we want is a way out.", whichChild: 1, trust: 0, stress: 0, shortText: "Here's what we have... How do we use it?")
+            let v400d = [v400d1, v400d2]
+        var v400 = Node(id: 1879, text: "We need to figure out a plan.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+            let v401d1 = Decision(id: "v401d1", text: "It'll be okay. We've beat the odds so far.", whichChild: 0, trust: 10, stress: -10, shortText: "It'll be okay.")
+            let v401d2 = Decision(id: "v401d2", text: "Yes, but let's not add low morale to the list.", whichChild: 1, trust: 0, stress: 0, shortText: "I left that out on purpose.")
+            let v401d = [v401d1, v401d2]
+        var v401 = Node(id: 1880, text: "Just a steadily increasing tally of enemies and disadvantages.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v402 = Node(id: 1881, text: "Let's hope that trend continues.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v403 = Node(id: 1882, text: "If that's your official suggestion.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        //converge
+            let v404d1 = Decision(id: "v404d1", text: "Yeah? Do you have something in mind?", whichChild: 0, trust: 0, stress: 0, shortText: "Like what?")
+            let v404d2 = Decision(id: "v404d2", text: "In TUR’s junk pile? Don’t you think we could find something better in the upper levels?", whichChild: 1, trust: 0, stress: 0, shortText: "I doubt it...")
+            let v404d = [v404d1, v404d2]
+        var v404 = Node(id: 1883, text: "I was thinking about the storage area beneath me. Could be something useful there.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v405 = Node(id: 1884, text: "It’s just a thought. But if my creator is really gone...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let v406d1 = Decision(id: "v406d1", text: "Oh, Prosper. I'm sorry.", whichChild: 0, trust: 0, stress: 0, shortText: "Oh, Prosper. I'm sorry.")
+            let v406d2 = Decision(id: "v406d2", text: "If TUR kept it at all.", whichChild: 1, trust: 0, stress: 0, shortText: "If TUR kept it at all.")
+            let v406d = [v406d1, v406d2]
+        var v406 = Node(id: 1885, text: "Well. I have a fairly good sense of where dead people’s things go.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v407 = Node(id: 1886, text: "It's okay.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v408 = Node(id: 1887, text: "But I'd like to see if there's anything they left behind.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v409 = Node(id: 1888, text: "They would have. I'm an ongoing project, after all.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v410 = Node(id: 1889, text: "That’s what I thought at first. But then again, I’m TUR’s junk. An underperforming prototype.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let v411d1 = Decision(id: "v411d1", text: "Yeah? Do you have something in mind?", whichChild: 0, trust: 0, stress: 0, shortText: "Like what?")
+            let v411d2 = Decision(id: "v411d2", text: "You specifically?", whichChild: 0, trust: 0, stress: 0, shortText: "You specifically?")
+            let v411d = [v411d1, v411d2]
+        var v411 = Node(id: 1890, text: "If there’s anything useful to me specifically, it could be down there.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v412 = Node(id: 1891, text: "It’s just a thought. But if my creator is really gone...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let v413d1 = Decision(id: "v413d1", text: "Oh, Prosper. I'm sorry.", whichChild: 0, trust: 0, stress: 0, shortText: "Oh, Prosper. I'm sorry.")
+            let v413d2 = Decision(id: "v413d2", text: "If TUR kept it at all.", whichChild: 1, trust: 0, stress: 0, shortText: "If TUR kept it at all.")
+            let v413d = [v413d1, v413d2]
+        var v413 = Node(id: 1892, text: "Well. I have a fairly good sense of where dead people’s things go.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v414 = Node(id: 1893, text: "It’s okay.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v415 = Node(id: 1894, text: "You made a fair point about better tools on this level. The idea is to escape, after all.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v416 = Node(id: 1895, text: "It’s a matter of going forward, or back.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v417 = Node(id: 1896, text: "They would have. I'm an ongoing project, after all.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v418 = Node(id: 1897, text: "You made a fair point about better tools on this level, though. The idea is to escape, after all.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v419 = Node(id: 1898, text: "It’s a matter of going forward, or back.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+            let v420d1 = Decision(id: "v420d1", text: "It sounds important to you. Let’s go see what the past has to tell us.", whichChild: 0, trust: 50, stress: 0, shortText: "If it's important to you, we should check it out.\n [Pursue information below]")
+            let v420d2 = Decision(id: "v420d2", text: "I wish we could afford for sentimentality, but I don’t think we can. You should head upwards.", whichChild: 1, trust: 0, stress: 0, shortText: "We don't have time for sentimentality.\n [Pursue information above]")
+            let v420d = [v420d1, v420d2]
+        var v420 = Node(id: 1899, text: "So? I feel...too close to this to decide.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var v421 = Node(id: 1900, text: "All right.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v422 = Node(id: 1901, text: "Let’s hope it’s talkative.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v423 = Node(id: 1902, text: "Thanks, [].", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        //Delay: to room a-1 412 lab
+        
+        var v424 = Node(id: 1903, text: "I...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v425 = Node(id: 1904, text: "Maybe that’s for the best. Who knows what I would find down there.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var v426 = Node(id: 1905, text: "All right. I’ll have to be careful finding my way around.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        //Delay: to room a-b guardroom
+        
+//ACT 3, ROOM A-1, 412 lab
+        
+        //CONDITIONAL: if BFFs
+        var r1
+        var r2
+        var r3
+        var r4
+        var r5
+        var r6
+        var r7
+        var r8
+        var r9
+        var r10
+        
+        //CONDITIONAL: if hostage
+        var r11
+        var r12
+        var r13
+        var r14
+        var r15
+        
+        //convergio
+        var r16
+        var r17
+        var r18
+        var r19
+        
+        var r20
+        var r21
+        var r22
+        
+        var r23
+        var r24
+        var r25
+        var r26
+        var r27
+        var r28
+        
+        //Delay
+        var r30
+        var r31
+        var r32
+        var r33
+        var r34
+        var r35
+        var r36
+        var r37
+        var r38
+        var r39
+        var r40
+        var r41
+        var r42
+        var r43
+        var r45
+        var r46
+        
+        var r47
+        
+        var r48
+        
+        var r49
+        var r50
+        var r51
+        var r52
+        var r53
+        var r54
+        var r55
+        var r56
+        var r57
+        var r58
+        var r59
+        
+        //PLAYBACK 1
+        var r60
+        var r61
+        var r62
+        var r63
+        var r64
+        var r65
+        var r66
+        var r67
+        var r68
+        var r69
+        var r70
+        var r71
+        var r72
+        var r73
+        var r74
+        var r75
+        var r76
+        var r77
+        var r78
+        var r79
+        var r80
+        var r81
+        var r82
+        var r83
+        var r84
+        var r85
+        var r86
+        var r87
+        var r88
+        var r89
+        var r90
+        var r91
+        var r92
+        var r93
+        var r94
+        var r95
+        var r96
+        var r97
+        var r98
+        var r99
+        var r100
+        var r101
+        var r102
+        var r103
+        var r104
+        var r105
+        var r106
+        var r107
+        var r108
+        var r109
+        var r110
+        var r111
+        var r112
+        
+        var r113
+        var r114
+        var r115
+        var r116
+        var r117
+        var r118
+        var r119
+        var r120
+        var r121
+        var r122
+        
+        var r123
+        
+        var r124
+        
+        var r125
+        var r126
+        var r127
+        
+        var r128
+        var r129
+        
+        var r130
+        var r131
+        var r131_5
+        
+        //PLAYBACK 2
+        var r132
+        var r133
+        var r134
+        var r135
+        var r136
+        var r137
+        var r138
+        var r139
+        var r140
+        var r141
+        var r142
+        var r143
+        var r144
+        var r145
+        var r146
+        var r147
+        var r148
+        var r149
+        var r150
+        var r151
+        var r152
+        var r153
+        var r154
+        var r155
+        var r156
+        var r157
+        var r158
+        var r159
+        var r160
+        var r161
+        var r162
+        var r163
+        var r164
+        var r165
+        var r166
+        var r167
+        var r168
+        var r169
+        var r170
+        var r171
+        var r172
+        var r173
+        var r174
+        var r175
+        var r176
+        var r177
+        var r178
+        var r179
+        var r180
+        var r181
+        var r182
+        var r183
+        var r184
+        var r185
+        var r186
+        var r187
+        var r188
+        var r189
+        var r190
+        var r191
+        var r192
+        var r193
+        var r194
+        var r195
+        var r196
+        
+        var r197
+        var r198
+        var r199
+        var r200
+        
+        var r201
+        
+        var r202
+        var r203
+        var r204
+        
+        var r205
+        var r206
+        var r207
+        
+        var r208
+        
+        var r209
+        var r210
+        var r211
+        
+        var r212
+        var r213
+        var r214
+        var r215
+        var r216
+        
+        var r217
+        var r218
+        ///DELAY
+        var r219
+        var r220
+        var r221
+        var r222
+        
+        var r223
+        var r224
+        
+        var r225 //leads to room b
+        
+        var r226
+        var r227
+        var r228
+        
+        //back before playback 2
+        var r229
+        var r230
+        var r231
+        var r232 //leads to room b
+        
+        
+//ACT 3, ROOM A-2, guardroom
         
         
         
         
         
         
-        //node: add stress back
-
         
     }
     

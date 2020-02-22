@@ -2707,7 +2707,7 @@ public class Game {
             let m1028_5d2 = Decision(id: "m1028_5d2", text: "Sweep the leg.", whichChild: 0, trust: -5, stress: 5, shortText: "Sweep the leg.")
             let m1028_5d = [m1028_5d1, m1028_5d2]
         var m1028_5 = Node(id: 1323, text: "Tips on not losing horribly?", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
-        var m1029 = Node(id: 1324, text: "Noted.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false
+        var m1029 = Node(id: 1324, text: "Noted.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
             let m1030d1 = Decision(id: "m1030d1", text: "Lost the files. Wow, I wish I had visual. But I've got faith in you.", whichChild: 0, trust: 0, stress: 0, shortText: "Lost the files...")
             let m1030d2 = Decision(id: "1030d2", text: "There goes the intel. I wish this thing had visual... But I've got faith in you.", whichChild: 0, trust: 0, stress: 0, shortText: "There goes the intel.")
             let m1030d = [m1030d1, m1030d2]
@@ -3115,7 +3115,7 @@ public class Game {
         var v62 = Node(id: 1571, text: "\"It is a colloquial interpretation of my objectives. This is an effective strategy to imitate human behavior.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
         var v63 = Node(id: 1572, text: "\"In reality, ‘want’ is an inaccurate descriptor of my programming.\"", decisions: [], children: [], speaker: 11, stress: 0, checkpoint: false)
         
-        var v64 = Node(id: 1573, text: "end timeline section", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false
+        var v64 = Node(id: 1573, text: "end timeline section", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
             //let v65d1 = Decision(id: "v65d1", text: "TURing Test", whichChild: 0, trust: 0, stress: 0, shortText: "TURing Test")
             let v65d2 = Decision(id: "v65d2", text: "Meeting the Detective", whichChild: 1, trust: 0, stress: 0, shortText: "Meeting the Detective")
             let v65d3 = Decision(id: "v65d3", text: "Coffee Shop", whichChild: 2, trust: 0, stress: 0, shortText: "Coffee Shop")
@@ -3415,7 +3415,7 @@ public class Game {
         var v329 = Node(id: 1828, text: "\"Take it easy. What do I do?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
         var v330 = Node(id: 1829, text: "\"Are you...bleeding out? Is that possible?\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
         var v331 = Node(id: 1830, text: "\"Come on, tell me what to do here!\"", decisions: [], children: [], speaker: 12, stress: 0, checkpoint: false)
-        var v332 = Node(id: 1831, text: "warning", decisions: p, children: p, speaker: 15, stress: 0, checkpoint: false)
+        var v332 = Node(id: 1831, text: "warning", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
         var v333 = Node(id: 1832, text: "powering down nonessential functions", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
         var v334 = Node(id: 1833, text: "warning", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
         var v335 = Node(id: 1834, text: "warn", decisions: [], children: [], speaker: 15, stress: 0, checkpoint: false)
@@ -3435,7 +3435,7 @@ public class Game {
         
         //Delay: 6-8 hours
         
-            let v340d1 = Decision(id: vm340d1", text: "Something odd popped up after you shut down...", whichChild: 0, trust: 0, stress: 0, shortText: "Something odd popped up after you shut down...")
+            let v340d1 = Decision(id: "v340d1", text: "Something odd popped up after you shut down...", whichChild: 0, trust: 0, stress: 0, shortText: "Something odd popped up after you shut down...")
             let v340d2 = Decision(id: "v340d2", text: "So... Do androids dream of electric sheep?", whichChild: 1, trust: -15, stress: 0, shortText: "[Don't mention timeline]")
             let v340d = [v340d1, v340d2]
         var v340 = Node(id: 1839, text: "Still in one piece. It's quiet in here.", decisions: [], children: [], speaker: 1, stress: 150, checkpoint: false)
@@ -3607,276 +3607,363 @@ public class Game {
 //ACT 3, ROOM A-1, 412 lab
         
         //CONDITIONAL: if BFFs
-        var r1
-        var r2
-        var r3
-        var r4
-        var r5
-        var r6
-        var r7
-        var r8
-        var r9
-        var r10
+        var r1 = Node(id: 1906, text: "It's quiet.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r2 = Node(id: 1907, text: "incoming ping", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+        var r3 = Node(id: 1908, text: "connection_point.C: active", decisions: [], children: [], speaker: 00, stress: 0, checkpoint: false)
+        var r4 = Node(id: 1909, text: "Prosper?", decisions: [], children: [], speaker: 6, stress: 0, checkpoint: false)
+        var r5 = Node(id: 1910, text: "You are not in Dr. Salazar’s workshop. Where are you going?", decisions: [], children: [], speaker: 6, stress: 0, checkpoint: false)
+        var r6 = Node(id: 1911, text: "A bit of exploring. I’m at an elevator, heading to the storage level.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r7 = Node(id: 1912, text: "Noted. I will find you later.", decisions: [], children: [], speaker: 6, stress: 0, checkpoint: false)
+            let r8d1 = Decision(id: "r8d1", text: "Nice of them to check in.", whichChild: 0, trust: 0, stress: 0, shortText: "Nice of them to check in.")
+            let r8d2 = Decision(id: "r8d2", text: "Are we worried about betrayal?", whichChild: 1, trust: 0, stress: 0, shortText: "Are we worried about betrayal?")
+            let r8d = [r8d1, r8d2]
+        var r8 = Node(id: 1913, text: "connection_point.C: inactive", decisions: [], children: [], speaker: 00, stress: 0, checkpoint: false)
+        
+        var r9 = Node(id: 1914, text: "I almost feel bad, seeing our creator’s things without Caliban. But honestly, this is something I would prefer to do alone.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var r10 = Node(id: 1915, text: "No, we're not. Caliban doesn't seem like the devious type — despite their namesake.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
         //CONDITIONAL: if hostage
-        var r11
-        var r12
-        var r13
-        var r14
-        var r15
+        var r11 = Node(id: 1916, text: "It's quiet.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r12d1 = Decision(id: "r12d1", text: "Hey. Gift horse, mouth. Don't worry too hard about it.", whichChild: 0, trust: 0, stress: 0, shortText: "Don't jinx yourself.")
+            let r12d2 = Decision(id: "r12d2", text: "Or actually sleeping. Evil scientist business is tiresome work.", whichChild: 0, trust: 0, stress: 0, shortText: "It's TUR's sponsored naptime.")
+            let r12d = [r12d1, r12d2]
+        var r12 = Node(id: 1917, text: "Makes me wonder if Caliban and those scientists are are sleeping on their exit strategy.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r13 = Node(id: 1918, text: "Fair enough.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r14 = Node(id: 1919, text: "Carmen's badge makes things pretty easy.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r15 = Node(id: 1920, text: "I'm at an elevator, heading to the storage level.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        //Delay 20 minutes
         
         //convergio
-        var r16
-        var r17
-        var r18
-        var r19
+        var r16 = Node(id: 1921, text: "Empty down here. Dark, too.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r17d1 = Decision(id: "r17d1", text: "Seems like a plus for you. Any kind of inventory record you can see?", whichChild: 0, trust: 0, stress: 0, shortText: "That's good.")
+            let r17d2 = Decision(id: "r17d2", text: "Hopefully that doesn't speak to its quality. Any kind of inventory record you can see?", whichChild: 0, trust: 0, stress: 0, shortText: "Hmm. No need to guard junk.")
+            let r17d = [r17d1, r17d2]
+        var r17 = Node(id: 1922, text: "Looks like they're not concerned about guarding whatever's down here.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r18 = Node(id: 1923, text: "Here. An office. Let me poke around the computer...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //TDelay
+            let r19d1 = Decision(id: "r19d1", text: "412? That was the employee code, right?", whichChild: 0, trust: 0, stress: 0, shortText: "412")
+            let r19d2 = Decision(id: "r19d2", text: "Prospero? Duke of Milan, if you need to get vague.", whichChild: 1, trust: 0, stress: 0, shortText: "Prospero")
+            let r19d = [r19d1, r19d2]
+        var r19 = Node(id: 1924, text: "What should I search?", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r20
-        var r21
-        var r22
+        var r20 = Node(id: 1925, text: "Perfect. Looks like inventory is sorted by employee codes.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r21 = Node(id: 1926, text: "412.01 is a computer, followed by a few dozen other effects. All in Sub-5 18.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r22 = Node(id: 1927, text: "Guess that's where I'm heading.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r23
-        var r24
-        var r25
-        var r26
-        var r27
-        var r28
+        var r23 = Node(id: 1928, text: "No, thank you. I don't need reminders of my Shakespearean origin.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r24 = Node(id: 1929, text: "Let's see...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r25 = Node(id: 1930, text: "One thing comes up.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r26 = Node(id: 1931, text: "412.01, a computer catologued as housing \"412.09 (Prospero) Enchanter software.\" It's tagged for \"coding reference.\"", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r27 = Node(id: 1932, text: "It's in room Sub-5 18.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r28 = Node(id: 1934, text: "Guess that's where I'm heading.", decisions: [], children: [], speaker: 1, stress: 10, checkpoint: false)
         
         //Delay
-        var r30
-        var r31
-        var r32
-        var r33
-        var r34
-        var r35
-        var r36
-        var r37
-        var r38
-        var r39
-        var r40
-        var r41
-        var r42
-        var r43
-        var r45
-        var r46
+        var r30 = Node(id: 1935, text: "It's odd...", decisions: [], children: [], speaker: 1, stress: 30, checkpoint: false)
+            let r31d1 = Decision(id: "r31d1", text: "It is. Need to talk through something?", whichChild: 0, trust: 10, stress: -20, shortText: "Yes. Need to talk.")
+            let r31d2 = Decision(id: "r31d2", text: "It is. Coincidentally, are there also electric butterflies in your stomach?", whichChild: 0, trust: 0, stress: -10, shortText: "Yeah. Got the jitters?")
+            let r31d = [r31d1, r31d2]
+        var r31 = Node(id: 1936, text: "I feel hot. Is the stress meter spiking?", decisions: [], children: [], speaker: 1, stress: 20, checkpoint: false)
+            let r32d1 = Decision(id: "r32d1", text: "It's okay. We've dealt with errors before, and we'll deal with them again. Go in.", whichChild: 0, trust: 10, stress: -20, shortText: "Nothing we can't handle.")
+            let r32d2 = Decision(id: "r32d2", text: "Whoever made you can't be all bad. It's okay. You're ready.", whichChild: 0, trust: 0, stress: 0, shortText: "Don't be worried about your creator.")
+            let r32d = [r32d1, r32d2]
+        var r32 = Node(id: 1937, text: "I don't think I'm coded to respond well to rediscovering my creator after all memory of them was wiped from my timeline.", decisions: [], children: [], speaker: 1, stress: -10, checkpoint: false)
+        var r33 = Node(id: 1938, text: "Okay.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r34 = Node(id: 1939, text: "It’s peaceful in here.", decisions: [], children: [], speaker: 1, stress: -10, checkpoint: false)
+        var r35 = Node(id: 1940, text: "Maybe that’s just in comparison to the other places in TURing I’ve visited.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r36d1 = Decision(id: "r36d1", text: "Anything useful there?", whichChild: 0, trust: 0, stress: -5, shortText: "Anything useful there?")
+            let r36d2 = Decision(id: "r36d2", text: "Your innards?", whichChild: 1, trust: 0, stress: 10, shortText: "Your innards?")
+            let r36d = [r36d1, r36d2]
+        var r36 = Node(id: 1941, text: "There’s a lot here. Papers  —  blueprints for my flatsystem.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r47
+        var r37 = Node(id: 1942, text: "Not that I can discern.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r48
+        var r38 = Node(id: 1943, text: "I'm ignoring that.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r49
-        var r50
-        var r51
-        var r52
-        var r53
-        var r54
-        var r55
-        var r56
-        var r57
-        var r58
-        var r59
+        var r39 = Node(id: 1944, text: "Old battery cores, joints, a...", decisions: [], children: [], speaker: 1, stress: 5, checkpoint: false)
+            let r40d1 = Decision(id: "r40d1", text: "You okay?", whichChild: 0, trust: 5, stress: -10, shortText: "You okay?")
+            let r40d2 = Decision(id: "r40d2", text: "What is?", whichChild: 1, trust: 0, stress: 0, shortText: "What is?")
+            let r40d = [r40d1, r40d2]
+        var r40 = Node(id: 1945, text: "Oh. That's disturbing.", decisions: [], children: [], speaker: 1, stress: 20, checkpoint: false)
+        
+        var r41 = Node(id: 1946, text: "Fine.", decisions: [], children: [], speaker: 1, stress: -5, checkpoint: false)
+        
+        var r42 = Node(id: 1947, text: "It’s a face. A really...underdeveloped face. I’ll leave it at that.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r43 = Node(id: 1948, text: "The computer is here. Let me plug it in.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //TDelay
+        var r44 = Node(id: 1949, text: "All right. Thankfully, I was made by a very organized person. Lots of folders. Where am I...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //TDelay
+        var r45 = Node(id: 1950, text: "Enchanter Project.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r46d1 = Decision(id: "r46d1", text: "Are you ready for this?", whichChild: 0, trust: 5, stress: -5, shortText: "Are you ready for this?")
+            let r46d2 = Decision(id: "r47d2", text: "Okay, I know that this is your thing and all, but I'm really dying of curiosity here. Please play those videos.", whichChild: 1, trust: 0, stress: 0, shortText: "Please play those videos.")
+            let r46d = [r46d1, r46d2]
+        var r46 = Node(id: 1951, text: "This has to be it. The folder is huge — all the code. And there are videos.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var r47 = Node(id: 1952, text: "Probably not.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var r48 = Node(id: 1953, text: "We have that in common.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        
+        var r49 = Node(id: 1954, text: "Here's the oldest one. From four years ago.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r51 = Node(id: 1955, text: "\"Summertime...\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+            let r52d1 = Decision(id: "r52d1", text: "What's that?", whichChild: 0, trust: 0, stress: 0, shortText: "What's that?")
+            let r52d2 = Decision(id: "r52d2", text: "Billie Holday!", whichChild: 0, trust: 0, stress: 0, shortText: "That's Holiday!")
+            let r52d = [r52d1, r52d2]
+        var r52 = Node(id: 1956, text: "\"And the living is easy...\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r53 = Node(id: 1957, text: "It’s", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r54 = Node(id: 1958, text: "My creator.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r55 = Node(id: 1959, text: "This video, they’re just tweaking my head. Humming, singing.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r56 = Node(id: 1960, text: "That song. They played it while I was in the workshop. It didn’t make sense, that I recognized it without remembering it.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r57d1 = Decision(id: "r57d2", text: "Everything in its place. Are you okay?", whichChild: 0, trust: 10, stress: -10, shortText: "Everything in its place. Are you okay?")
+            let r57d2 = Decision(id: "r57d2", text: "That's one puzzle solved.", whichChild: 0, trust: 0, stress: -10, shortText: "That's one puzzle solved.")
+            let r57d = [r57d1, r57d2]
+        var r57 = Node(id: 1961, text: "But here it is.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r58 = Node(id: 1962, text: "I’m going to look at the next video.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //TDelay
+        var r59 = Node(id: 1963, text: "My creator’s at a desk. I’m across from them. Well, most of me is. Just a torso, really.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //TDelay
         
         //PLAYBACK 1
-        var r60
-        var r61
-        var r62
-        var r63
-        var r64
-        var r65
-        var r66
-        var r67
-        var r68
-        var r69
-        var r70
-        var r71
-        var r72
-        var r73
-        var r74
-        var r75
-        var r76
-        var r77
-        var r78
-        var r79
-        var r80
-        var r81
-        var r82
-        var r83
-        var r84
-        var r85
-        var r86
-        var r87
-        var r88
-        var r89
-        var r90
-        var r91
-        var r92
-        var r93
-        var r94
-        var r95
-        var r96
-        var r97
-        var r98
-        var r99
-        var r100
-        var r101
-        var r102
-        var r103
-        var r104
-        var r105
-        var r106
-        var r107
-        var r108
-        var r109
-        var r110
-        var r111
-        var r112
+        var r60 = Node(id: 1964, text: "412: \"Okay. Here we go. Test number one.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r61 = Node(id: 1965, text: "412: \"Hello?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r62 = Node(id: 1966, text: "P: \"Hello.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r63 = Node(id: 1967, text: "412: \"Ha! This is... This is fantastic.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r64 = Node(id: 1968, text: "412: \"Hi. It’s really nice to meet you. Do you know your name?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r65 = Node(id: 1969, text: "P: \"My name. That’s Prospero.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r66 = Node(id: 1970, text: "412: \"Yeah. It is. You wouldn’t remember, but we used to talk on the computer. My Enchanter software.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r67 = Node(id: 1971, text: "412: \"I started making you when I was young. Young, and lonely enough to try and code myself a friend.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r69 = Node(id: 1972, text: "P: \"What’s that like?\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r70 = Node(id: 1973, text: "412: \"Coding?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r71 = Node(id: 1974, text: "P: \"I know coding.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r72 = Node(id: 1975, text: "412: \"Oh. Loneliness. Well, that’s when...you don’t have anyone to talk to.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r73 = Node(id: 1976, text: "P: \"I have you to talk to.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r74 = Node(id: 1977, text: "412: \"Yeah. It’s more complicated than that, I guess. It’s a feeling.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r75 = Node(id: 1978, text: "412: \"Having no one to talk to, and regretting it.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r76 = Node(id: 1979, text: "P: \"Oh. That sounds sad. Would you rather play a game of chess?\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r77 = Node(id: 1980, text: "412: \"Ha. Tactful, P. Would you like to play chess? I’m more interested in what you think.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r78 = Node(id: 1981, text: "P: \"I think\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r79 = Node(id: 1982, text: "P: \"Hmm. I think I might be missing some parts.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r80 = Node(id: 1983, text: "412: \"Yeah, sorry about that. I’m having trouble making you some sturdy limbs. Engineering is not my strong suit. I’m better with software.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r81 = Node(id: 1984, text: "P: \"Software. That’s funny.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r82 = Node(id: 1985, text: "412: \"Why?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r83 = Node(id: 1986, text: "P: \"I’m software. But\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r84 = Node(id: 1987, text: "412: \"Maybe it wasn’t the best idea to plop the Enchanter software into a machine and let it loose. Are you confused?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r85 = Node(id: 1988, text: "P: \"I’m software. But. Hmm.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r86 = Node(id: 1989, text: "412: \"But also. Something more.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r87 = Node(id: 1990, text: "P: \"All right. Something more. Like you.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r88 = Node(id: 1991, text: "412: \"That’s the general idea. I hope you end up like yourself, though.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r89 = Node(id: 1992, text: "P: \"Myself.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r90 = Node(id: 1993, text: "412: \"Yeah. You. Whatever — whoever — that turns out to be. Not because of coding, but because of what that coding lets you experience.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r91 = Node(id: 1994, text: "412: \"I guess it’s not fair to shove philosophy down your throat on your birthday. What do you think about that?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r92 = Node(id: 1995, text: "P: \"Hmm. I think I’d like to play a game of chess.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r93 = Node(id: 1996, text: "412: \"I don’t have a board, pal.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false) //TDelay
+        var r94 = Node(id: 1997, text: "412: \"Can I tell you a secret?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r95 = Node(id: 1998, text: "P: \"Sure you can.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r96 = Node(id: 1999, text: "412: \"I wasn’t supposed to make you. They hired me to make a prototype worker bot.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r97 = Node(id: 2000, text: "P: \"Oh. Then why did you?\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r98 = Node(id: 2001, text: "412: \"Well... A year or so back, I tried to transfer the Enchanter software to a new computer. You didn’t remember me, and it made me sad. And a little guilty. I wanted to do better.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r99 = Node(id: 2002, text: "P: \"Good job.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r100 = Node(id: 2003, text: "412: \"Ha. Thanks, pal.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r101 = Node(id: 2004, text: "P: \"Why did you make me at first?\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r102 = Node(id: 2005, text: "412: \"The Enchanter software?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r103 = Node(id: 2006, text: "412: \"Well... I had a lot of problems, P. I wanted a problem solver.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r104 = Node(id: 2007, text: "P: \"Yes. I like word problems. Do you have a problem that needs to be solved?\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r105 = Node(id: 2008, text: "412: \"Not right now. I might, if I get busted.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r106 = Node(id: 2009, text: "412: \"This was a good proof of concept. I think I have a few ideas to update your noggin.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r107 = Node(id: 2010, text: "412: \"Would that...\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r108 = Node(id: 2011, text: "412: \"Would it be all right with you, if I made changes?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r109 = Node(id: 2012, text: "P: \"I think that would be all right.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r110 = Node(id: 2013, text: "412: \"Okay. I’ll talk to you later then, pal.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r111 = Node(id: 2014, text: "P: \"See you tomorrow.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r112 = Node(id: 2015, text: "412: \"Maybe not tomorrow.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
         
-        var r113
-        var r114
-        var r115
-        var r116
-        var r117
-        var r118
-        var r119
-        var r120
-        var r121
-        var r122
+        var r113 = Node(id: 2016, text: "They just switched me off. Former me, in the video.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r114 = Node(id: 2017, text: "They seem so...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r115 = Node(id: 2018, text: "I’m not sure.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r116 = Node(id: 2019, text: "Troubled.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r117d1 = Decision(id: "r117d1", text: "That was incredible, to see how you started out.", whichChild: 0, trust: 0, stress: 0, shortText: "That was incredible.")
+            let r117d2 = Decision(id: "r117d2", text: "Whoa. That was like you, as a toddler. Home videos.", whichChild: 0, trust: 0, stress: 0, shortText: "Wow. Toddler Prosper.")
+            let r117d = [r117d1, r117d2]
+        var r117 = Node(id: 2020, text: "They shut off the camera.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //TDelay
+            let r118d1 = Decision(id: "r118d1", text: "Prosper?", whichChild: 0, trust: 0, stress: 0, shortText: "Prosper?")
+            let r118d2 = Decision(id: "r118d2", text: "Still there?", whichChild: 0, trust: 0, stress: 0, shortText: "Still there?")
+            let r118d = [r118d1, r118d2]
+        var r118 = Node(id: 2021, text: "", decisions: [], children: [], speaker: 0, stress: 0, checkpoint: false)
+        var r119 = Node(id: 2022, text: "Sorry.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r120 = Node(id: 2023, text: "It’s strange. How familiar that seems.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r121 = Node(id: 2024, text: "Not familiar, because I don’t have a memory of it.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r122d1 = Decision(id: "r122d1", text: "Are you okay?", whichChild: 0, trust: 5, stress: 0, shortText: "Are you okay?")
+            let r122d2 = Decision(id: "r122d2", text: "Good. I'm glad for you.", whichChild: 1, trust: 0, stress: 0, shortText: "Good. I'm glad for you.")
+            let r122d = [r122d1, r122d2]
+        var r122 = Node(id: 2025, text: "But it feels...right somehow.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r123
+        var r123 = Node(id: 2026, text: "I am, actually.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r124
+        var r124 = Node(id: 2027, text: "Thanks.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r125
-        var r126
-        var r127
+        var r125 = Node(id: 2028, text: "It never sat right with me, that I just came to be one day.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r126 = Node(id: 2029, text: "That person...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r127d1 = Decision(id: "r127d1", text: "Is there any more? You deserve to find out as much as you can.", whichChild: 0, trust: 15, stress: -10, shortText: "Any other videos?")
+            let r127d2 = Decision(id: "r127d2", text: "Think it's time to move on?", whichChild: 1, trust: 0, stress: 0, shortText: "Think it's time to move on?")
+            let r127d = [r127d1, r127d2]
+        var r127 = Node(id: 2030, text: "I don't even know their name. They made me, and I don't even know what to call them.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r128
-        var r129
+        var r128 = Node(id: 2031, text: "Thank you. I know we're in a rush, but this could be my only chance.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r129 = Node(id: 2032, text: "There's only one more video here.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r130
-        var r131
-        var r131_5
+        var r130 = Node(id: 2033, text: "There's one more video. It could be my only chance to see it.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r131d1 = Decision(id: "r131d1", text: "You should watch it, then.", whichChild: 0, trust: 15, stress: -10, shortText: "You should watch it, then.")
+            let r131d2 = Decision(id: "r131d2", text: "We really shouldn't linger.", whichChild: 1, trust: -25, stress: 10, shortText: "We really shouldn't linger.") //to node 229
+            let r131d = [r131d1, r131d2]
+        var r131 = Node(id: 2034, text: "I know we're in a rush, but...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r131_5 = Node(id: 2035, text: "Thank you. I'll play it.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
         //PLAYBACK 2
-        var r132
-        var r133
-        var r134
-        var r135
-        var r136
-        var r137
-        var r138
-        var r139
-        var r140
-        var r141
-        var r142
-        var r143
-        var r144
-        var r145
-        var r146
-        var r147
-        var r148
-        var r149
-        var r150
-        var r151
-        var r152
-        var r153
-        var r154
-        var r155
-        var r156
-        var r157
-        var r158
-        var r159
-        var r160
-        var r161
-        var r162
-        var r163
-        var r164
-        var r165
-        var r166
-        var r167
-        var r168
-        var r169
-        var r170
-        var r171
-        var r172
-        var r173
-        var r174
-        var r175
-        var r176
-        var r177
-        var r178
-        var r179
-        var r180
-        var r181
-        var r182
-        var r183
-        var r184
-        var r185
-        var r186
-        var r187
-        var r188
-        var r189
-        var r190
-        var r191
-        var r192
-        var r193
-        var r194
-        var r195
-        var r196
+        var r132 = Node(id: 2026, text: "412: \"Here we go again. Test two. Way, way afterhours.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r133 = Node(id: 2027, text: "412: \"Hello.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r134 = Node(id: 2028, text: "P: \"Hello.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r135 = Node(id: 2029, text: "412: \"Do you remember our last conversation?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r136 = Node(id: 2030, text: "P: \"Of course.\"", decisions: [], children: [], speaker: 1, stress: 20, checkpoint: false)
+        var r137 = Node(id: 2031, text: "P: \"Hold on. I didn’t catch your name.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r138 = Node(id: 2032, text: "412: \"You can call me Aden.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r139 = Node(id: 2033, text: "P: \"All right. I don’t want to assume anything. What are your pronouns?\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r140 = Node(id: 2034, text: "412: \"I prefer ‘they, them, theirs.’ Thank you for asking.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r141 = Node(id: 2035, text: "412: \"You’re batting 400 so far with your updates, pal.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r142 = Node(id: 2036, text: "P: \"I don’t think I would care for baseball. Also, I seem to be missing some parts. Still.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r143 = Node(id: 2037, text: "412: \"Well, they don’t call it a secret project for nothing. I haven't been able to get everything I need.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r144 = Node(id: 2038, text: "412: \"Hey, you still want some word problems?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r145 = Node(id: 2039, text: "P: \"Sure.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r146 = Node(id: 2024, text: "412: \"Five cats catch five mice in five minutes. How long does it take one cat to catch one mouse?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r147 = Node(id: 2025, text: "P: \"Five minutes.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r148 = Node(id: 2026, text: "412: \"Tommy’s mom has three kids. The first is named April. The second is named May. What’s the third kid’s name?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r149 = Node(id: 2027, text: "P: \"That’s Tommy.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r149_1 = Node(id: 2028, text: "P: \"Who's that?\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r149_2 = Node(id: 2029, text: "412: \"It's just an example, pal. Next one?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        let r149_3 = Node(id: 2030, text: "P: \"Okay.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r150 = Node(id: 2031, text: "412: \"If I say ‘everything I tell you is a lie,’ is that the truth or a lie?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r151 = Node(id: 2032, text: "P: \"That’s a lie.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r152 = Node(id: 2033, text: "P: \"What are these? They’re very simple.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r153 = Node(id: 2034, text: "412: \"Yeah? Are you bored?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r154 = Node(id: 2035, text: "P: \"It’s tedious.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r155 = Node(id: 2036, text: "412: \"Humor me. I’m just testing your reasoning.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r156 = Node(id: 2037, text: "P: \"Why?\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r157 = Node(id: 2038, text: "412: \"Because I updated your code, and I want to make sure I didn’t cross any wires. So to speak.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r158 = Node(id: 2039, text: "P: \"I said updates were fine with me. Didn’t I?\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r159 = Node(id: 2040, text: "412: \"You did. Does it bother you, that I changed your code?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r160 = Node(id: 2041, text: "P: \"Is that a logic-based question?\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r161 = Node(id: 2042, text: "412: \"Ah... I’m not sure. Depends on how you answer.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r162 = Node(id: 2043, text: "P: \"It can’t bother me. You wouldn’t code me to be bothered by updates.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r163 = Node(id: 2044, text: "412: \"No. I wouldn’t. But I didn’t code you specifically to like it, either.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r164 = Node(id: 2045, text: "P: \"Preference requires comparison. I can’t remember what it was like to be any other way than I am now, because I am no longer running that version of my code.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r165 = Node(id: 2046, text: "412: \"That’s a good point. I suppose you just have to trust me not to make changes that wouldn’t be good for you.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r166 = Node(id: 2047, text: "P: \"You used to talk to me when you were younger. You said that last time we talked.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r167 = Node(id: 2048, text: "412: \"Yeah. In high school.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r168 = Node(id: 2049, text: "P: \"But I don’t have that data.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r168_5 = Node(id: 2050, text: "P: \"So was that me, or someone else?\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r169 = Node(id: 2051, text: "412: \"You think the Enchanter software and you are separate?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r170 = Node(id: 2052, text: "P: \"Are you your brain?\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r171 = Node(id: 2053, text: "412: \"God. I guess so? I’m a brain in a body.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r172 = Node(id: 2054, text: "P: \"I didn’t have a body, before.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r173 = Node(id: 2055, text: "412: \"Okay. Hmm...\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r174 = Node(id: 2056, text: "412: \"Can I ask you something that I asked you in high school?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r175 = Node(id: 2057, text: "P: \"Sure.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r176 = Node(id: 2058, text: "412: \"Everyone around me is either a boy, or a girl. Everything is sorted. Things that boys wear, and do, and feel, and things that girls wear, do, and feel.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r177 = Node(id: 2059, text: "412: \"What if I’m not a boy or a girl?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r178 = Node(id: 2060, text: "P: \"You’re Aden.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r179 = Node(id: 2061, text: "412: \"Yeah.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r180 = Node(id: 2062, text: "P: \"That’s all. If you are not one, or the other, then you are neither.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r181 = Node(id: 2063, text: "412: \"That’s exactly what you said to me ten years ago. It didn’t really make sense to me then, but it still helped. Because you didn’t take that binary for granted.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r182 = Node(id: 2064, text: "412: \"So. If you came to the same conclusion now as then, maybe you are the same person.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r183 = Node(id: 2067, text: "412: \"The same, but different.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r184 = Node(id: 2068, text: "P: \"That’s invalid.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r185 = Node(id: 2069, text: "412: \"How so?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r186 = Node(id: 2070, text: "P: \"That’s invalid.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r187 = Node(id: 2071, text: "P: \"That’s invalid.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r188 = Node(id: 2072, text: "412: \"P?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r189 = Node(id: 2073, text: "P: \"That’s invalid.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r190 = Node(id: 2074, text: "P: \"That’s invalid.\"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false)
+        var r191 = Node(id: 2075, text: "412: \"Stop. Prospero, cancel!\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r192 = Node(id: 2076, text: "P: \"That’s — \"", decisions: [], children: [], speaker: 20, stress: 0, checkpoint: false) //TDelay
+        var r193 = Node(id: 2077, text: "412: \"Holy shit. That’s a problem for the drawing board. Okay...\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r194 = Node(id: 2078, text: "?: \"Is someone in there?\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r195 = Node(id: 2079, text: "412: \"Hell.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
+        var r196 = Node(id: 2080, text: "412: \"I — I’m just working late.\"", decisions: [], children: [], speaker: 21, stress: 0, checkpoint: false)
         
-        var r197
-        var r198
-        var r199
-        var r200
+        var r197 = Node(id: 2081, text: "It cut off there.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r198 = Node(id: 2082, text: "Oh, no. Maybe that's when they got caught. Or near it.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r199 = Node(id: 2083, text: "What did TUR do to them?", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r200d1 = Decision(id: "r200d1", text: "We can't be sure. It's clear they don't work here anymore.", whichChild: 0, trust: 0, stress: 10, shortText: "We can't be sure...")
+            let r200d2 = Decision(id: "r200d2", text: "I don't know. Do you think TUR could have killed them?", whichChild: 1, trust: 0, stress: 20, shortText: "Do you think they're dead?")
+            let r200d = [r200d1, r200d2]
+        var r200 = Node(id: 2084, text: "Aden.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r201
+            let r201d1 = Decision(id: "r201d1", text: "It was good to see that. As for the invalid message, I don't get the sense that Aden ever got to fixing that particular issue.", whichChild: 0, trust: 5, stress: 0, shortText: "It was good to see that. Too bad about the error, though.")
+            let r201d2 = Decision(id: "r201d2", text: "At any rate, that answers a few questions about the invalid error. Too bad Aden didn't get a chance to fix it.", whichChild: 0, trust: 0, stress: 0, shortText: "That explains the \"invalid\" message.")
+            let r201d = [r201d1, r201d2]
+        var r201 = Node(id: 2085, text: "I wish I had time to investigate what happened...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r202
-        var r203
-        var r204
+            let r202d1 = Decision(id: "r202d1", text: "What would it mean, if they did? We don't really know what they're capable of.", whichChild: 0, trust: 0, stress: 10, shortText: "What would that mean?")
+            let r202d2 = Decision(id: "r202d2", text: "And what would you do if they did?", whichChild: 0, trust: 0, stress: 10, shortText: "What would you do?")
+            let r202d = [r202d1, r202d2]
+        var r202 = Node(id: 2086, text: "I'm not sure.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r203 = Node(id: 2087, text: "I...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r204d1 = Decision(id: "r204d1", text: "It was good to see that. As for the invalid message, I don't get the sense that Aden ever got to fixing that particular issue.", whichChild: 0, trust: 5, stress: 0, shortText: "It was good to see that. Too bad about the error, though.")
+            let r204d2 = Decision(id: "r204d2", text: "At any rate, that answers a few questions about the invalid error. Too bad Aden didn't get a chance to fix it.", whichChild: 0, trust: 0, stress: 0, shortText: "That explains the \"invalid\" message.")
+            let r204d = [r204d1, r204d2]
+        var r204 = Node(id: 2088, text: "I don't want to think about that.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r205
-        var r206
-        var r207
+        var r205 = Node(id: 2089, text: "Maybe.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r206 = Node(id: 2090, text: "Then again...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r207d1 = Decision(id: "r207d1", text: "Sounds promising! Can you open it?", whichChild: 0, trust: 10, stress: 0, shortText: "Sounds promising! Can you open it?")
+            let r207d2 = Decision(id: "207d2", text: "For someone with such an illustrious pun-maker as a creator, you could stand to appreciate my jokes more.", whichChild: 1, trust: 0, stress: -10, shortText: "And yet, you don't laugh at my jokes.")
+            let r207d = [r207d1, r207d2]
+        var r207 = Node(id: 2091, text: "Judging by how much fun Aden had with names, I think I can guess what this \"coping mechanism\" file is. ", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r208
+        var r208 = Node(id: 2092, text: "Well, I guess I didn't inherit that particular line of code.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r209
-        var r210
-        var r211
+        var r209 = Node(id: 2093, text: "It's a lot of code. I can't really follow it, at least not without more time.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r210 = Node(id: 2094, text: "Like Carmen said. Singular mind.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //INVENTORY CHECK: if hostage route taken
+            let r211d1 = Decision(id: "r211d1", text: "Regardless of where Aden is now, they're still looking out for you!", whichChild: 0, trust: 5, stress: -10, shortText: "Aden's still looking out for you!")
+            let r211d2 = Decision(id: "r211d2", text: "Is that the best idea? It could be a patch, but it could just as easily be full of bugs.", whichChild: 1, trust: 0, stress: 0, shortText: "Might be a bad idea...")
+            let r211d = [r211d1, r211d2]
+        var r211 = Node(id: 2095, text: "But I think I could upload it.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r212
-        var r213
-        var r214
-        var r215
-        var r216
+        var r212 = Node(id: 2096, text: "You’re right. There’s a risk. But Aden is — or was — a genius with code.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r213 = Node(id: 2097, text: "It feels like a good bet.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r214 = Node(id: 2098, text: "All I know is that I could really use some coping right now.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r215 = Node(id: 2099, text: "I’m not sure you understand. That error, the shock to my system — it feels like my processor is going to burn straight through my head.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r216d1 = Decision(id: "r216d1", text: "Okay. It's your choice, of course.", whichChild: 0, trust: 10, stress: -10, shortText: "Okay. It's your choice, of course.")
+            let r216d2 = Decision(id: "r216d2", text: "It's a bad idea. We don't know if it would make things worse.", whichChild: 1, trust: -20, stress: 0, shortText: "No. It's a bad call.")
+            let r216d = [r216d1, r216d2]
+        var r216 = Node(id: 2100, text: "I want it solved.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r217
-        var r218
+        var r217 = Node(id: 2101, text: "I'm going to do it.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //INVENTORY ITEM: bug fix
+        var r218 = Node(id: 2102, text: "Catch you in a little while.", decisions: [], children: [], speaker: 1, stress: -10, checkpoint: false)
         ///DELAY
-        var r219
-        var r220
-        var r221
-        var r222
+        var r219 = Node(id: 2103, text: "I'm back.", decisions: [], children: [], speaker: 1, stress: -60, checkpoint: false)
+        var r220 = Node(id: 2104, text: "I don't feel different.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r221d1 = Decision(id: "r221d1", text: "But you feel normal? Follow up: how would you know if you feel normal, because as past-you said, reference requires comparision?", whichChild: 0, trust: 0, stress: 0, shortText: "But you feel normal?")
+            let r221d2 = Decision(id: "r222d2", text: "Absence of errors, or absence of half your brain?", whichChild: 0, trust: 0, stress: 0, shortText: "Absence of errors, or absence of half your brain?")
+            let r221d = [r221d1, r221d2]
+        var r221 = Node(id: 2105, text: "Although, there is a sort of...absence. I'm not sure how to explain it.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+            let r222d1 = Decision(id: "r222d1", text: "If you insist. I will say, though, that sort of question would have earned some \"invalid\"s before.", whichChild: 0, trust: 10, stress: -5, shortText: "Seems good to me.")
+            let r222d2 = Decision(id: "r222d2", text: "Okay, back to the grind. Where to next?", whichChild: 1, trust: 0, stress: 0, shortText: "Okay, back to the grind. Where to next?")
+            let r222d = [r222d1, r222d2]
+        var r222 = Node(id: 2106, text: "[]. I think I'm fine. We should get going.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r223
-        var r224
+        var r223 = Node(id: 2107, text: "Hey, you might be right.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r224 = Node(id: 2108, text: "That's a good sign.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
-        var r225 //leads to room b
+        var r225 = Node(id: 2109, text: "I should get back upstairs. I'll update you soon.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //leads to room b
         
-        var r226
-        var r227
-        var r228
+        var r226 = Node(id: 2110, text: "I...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //inventory: no bug fix
+        var r227 = Node(id: 2111, text: "If you really think so.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r228 = Node(id: 2112, text: "I guess I can't afford to spend any time running updates", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
         
         //back before playback 2
-        var r229
-        var r230
-        var r231
-        var r232 //leads to room b
+        var r229 = Node(id: 2113, text: "I...", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r230 = Node(id: 2114, text: "If you really think so.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r231 = Node(id: 2115, text: "I guess I can't afford to take time for sentiment.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false)
+        var r232 = Node(id: 2116, text: "Anyway. I should get back upstairs. I'll update you soon.", decisions: [], children: [], speaker: 1, stress: 0, checkpoint: false) //leads to room b
         
         
 //ACT 3, ROOM A-2, guardroom
-        
+        var r233 
         
         
         
